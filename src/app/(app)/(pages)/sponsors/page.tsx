@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 import { addQueryParams } from "@/utils/url"
 import { ArrowUpRightIcon } from "lucide-react"
@@ -193,4 +194,9 @@ function SponsorsGroup({
       </div>
     </div>
   )
+}
+*/
+
+export default function Page() {
+  return null
 }

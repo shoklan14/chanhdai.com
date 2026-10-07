@@ -27,8 +27,8 @@ function getWebSiteJsonLd(): WithContext<WebSite> {
 // Thanks @shadcn-ui, @tailwindcss
 const darkModeScript = String.raw`
   try {
-    if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+    if (localStorage.theme === 'light' || (localStorage.theme === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.light}')
     }
   } catch (_) {}
 
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
   keywords: SITE_INFO.keywords,
   authors: [
     {
-      name: "ncdai",
+      name: USER.displayName,
       url: SITE_INFO.url,
     },
   ],
-  creator: "ncdai",
+  creator: USER.displayName,
   openGraph: {
     siteName: SITE_INFO.name,
     url: "/",
@@ -81,24 +81,24 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "https://assets.chanhdai.com/images/favicon.ico",
+        url: "/favicon.ico",
         sizes: "32x32",
       },
       {
-        url: "https://assets.chanhdai.com/images/favicon.svg",
+        url: "/images/favicon.svg",
         sizes: "any",
         type: "image/svg+xml",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "https://assets.chanhdai.com/images/favicon-dark.svg",
+        url: "/images/favicon-dark.svg",
         sizes: "any",
         type: "image/svg+xml",
         media: "(prefers-color-scheme: dark)",
       },
     ],
     apple: {
-      url: "https://assets.chanhdai.com/images/apple-touch-icon.png",
+      url: "/images/apple-touch-icon.png",
       type: "image/png",
       sizes: "180x180",
     },
@@ -109,7 +109,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: META_THEME_COLORS.light,
+  themeColor: META_THEME_COLORS.dark,
 }
 
 export default function RootLayout({

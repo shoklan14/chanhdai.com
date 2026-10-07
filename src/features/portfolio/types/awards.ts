@@ -1,3 +1,5 @@
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
+
 export type Award = {
   id: string
   prize: string
@@ -16,4 +18,6 @@ export type Award = {
   description?: string
   /** Optional URL to certificate, announcement, or reference material. */
   referenceLink?: string
+  views?: PortfolioView[]
+  category?: "academic" | "medical" | "technical" | "general"
 }

@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 
 import { X_HANDLE } from "@/config/site"
@@ -81,8 +82,8 @@ export default function CraftPage() {
           ))}
         </ul>
 
-        <div className="h-4" />
-      </div>
-    </>
-  )
+*/
+
+export default function CraftPage() {
+  return null
 }

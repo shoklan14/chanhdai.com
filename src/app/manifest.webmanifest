@@ -1,28 +1,28 @@
 {
-  "short_name": "Chánh Đại",
-  "name": "Chánh Đại",
-  "description": "Creating with code. Small details matter.",
+  "short_name": "shoklan",
+  "name": "Mufarowashe Mashoko",
+  "description": "Medical student & self-taught software developer building at the intersection of medicine, software, and AI.",
   "icons": [
     {
-      "src": "https://assets.chanhdai.com/images/icon-vector.svg",
+      "src": "/images/icon-vector.svg",
       "type": "image/svg+xml",
       "sizes": "any",
       "purpose": "any"
     },
     {
-      "src": "https://assets.chanhdai.com/images/icon-192x192.png",
+      "src": "/images/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "https://assets.chanhdai.com/images/icon-512x512.png",
+      "src": "/images/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "https://assets.chanhdai.com/images/maskable-icon.png",
+      "src": "/images/maskable-icon.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"

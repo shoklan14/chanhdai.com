@@ -1,3 +1,4 @@
+/*
 import { Suspense } from "react"
 import type { Metadata } from "next"
 import type { Blog, WithContext } from "schema-dts"
@@ -114,4 +115,9 @@ export default function Page() {
       </div>
     </>
   )
+}
+*/
+
+export default function Page() {
+  return null
 }

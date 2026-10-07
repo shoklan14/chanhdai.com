@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import type { Metadata } from "next"
 import type { ProfilePage, WithContext } from "schema-dts"
 
@@ -7,27 +6,28 @@ import { JSON_LD_ID } from "@/config/json-ld"
 import { JsonLdScript } from "@/lib/json-ld"
 import { absoluteUrl, cn } from "@/lib/utils"
 import { FloatingCarbonAds } from "@/components/floating-carbon-ads"
-import { Blocks } from "@/features/portfolio/components/blocks"
-import { Blog } from "@/features/portfolio/components/blog"
-import { Components } from "@/features/portfolio/components/components"
+// import { Blocks } from "@/features/portfolio/components/blocks"
+// import { Blog } from "@/features/portfolio/components/blog"
+// import { Components } from "@/features/portfolio/components/components"
 import { Education } from "@/features/portfolio/components/education"
 import { Experiences } from "@/features/portfolio/components/experiences"
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions"
 import { Hello } from "@/features/portfolio/components/hello"
-import {
-  Insights,
-  InsightsSkeleton,
-} from "@/features/portfolio/components/insights"
+// import {
+//   Insights,
+//   InsightsSkeleton,
+// } from "@/features/portfolio/components/insights"
 import { Overview } from "@/features/portfolio/components/overview"
 import { ProfileHeader } from "@/features/portfolio/components/profile-header"
 import { Projects } from "@/features/portfolio/components/projects"
 import { Recognition } from "@/features/portfolio/components/recognition"
 import { SocialLinks } from "@/features/portfolio/components/social-links"
-import { Sponsors } from "@/features/portfolio/components/sponsors"
-import { SponsorsCarousel } from "@/features/portfolio/components/sponsors-carousel"
+// import { Sponsors } from "@/features/portfolio/components/sponsors"
+// import { SponsorsCarousel } from "@/features/portfolio/components/sponsors-carousel"
 import { TechStack } from "@/features/portfolio/components/tech-stack"
-import { Testimonials } from "@/features/portfolio/components/testimonials"
+// import { Testimonials } from "@/features/portfolio/components/testimonials"
 import { USER } from "@/features/portfolio/data/user"
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
 
 export const metadata: Metadata = {
   alternates: {
@@ -35,7 +35,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HomePage() {
+type HomePageProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function HomePage(props: HomePageProps) {
+  const searchParams = await props.searchParams
+  const rawView =
+    typeof searchParams.view === "string"
+      ? searchParams.view.toLowerCase()
+      : undefined
+  const view: PortfolioView =
+    rawView === "medicine" || rawView === "software" ? rawView : "both"
+
   return (
     <>
       <JsonLdScript data={getProfilePageJsonLd()} />
@@ -43,49 +55,49 @@ export default function HomePage() {
 
       <div className="[--separator-height:--spacing(8)] **:data-[slot=panel]:scroll-mt-[calc(var(--header-height)+var(--separator-height))]">
         <div className="mx-auto md:max-w-3xl">
-          <ProfileHeader />
+          <ProfileHeader view={view} />
           <Separator />
 
           <SocialLinks />
-          <Overview />
+          <Overview view={view} />
           <GitHubContributions />
           <Separator />
 
           <Hello />
-          <SponsorsCarousel />
-          <Testimonials />
+          {/* <SponsorsCarousel /> */}
+          {/* <Testimonials /> */}
+          {/* <Separator /> */}
+
+          {/* <Components /> */}
+          {/* <Separator /> */}
+
+          {/* <Blocks /> */}
+          {/* <Separator /> */}
+
+          {/* <Blog /> */}
           <Separator />
 
-          <Components />
+          <TechStack view={view} />
           <Separator />
 
-          <Blocks />
+          <Experiences view={view} />
           <Separator />
 
-          <Blog />
+          <Education view={view} />
           <Separator />
 
-          <TechStack />
+          <Projects view={view} />
           <Separator />
 
-          <Experiences />
-          <Separator />
+          <Recognition view={view} />
+          {/* <Separator /> */}
 
-          <Education />
-          <Separator />
-
-          <Projects />
-          <Separator />
-
-          <Recognition />
-          <Separator />
-
-          <Suspense fallback={<InsightsSkeleton />}>
+          {/* <Suspense fallback={<InsightsSkeleton />}>
             <Insights />
-          </Suspense>
-          <Separator />
+          </Suspense> */}
+          {/* <Separator /> */}
 
-          <Sponsors />
+          {/* <Sponsors /> */}
         </div>
       </div>
     </>

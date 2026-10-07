@@ -48,7 +48,7 @@ export function SiteHeader() {
 
         <div className="flex-1" />
 
-        <NavDesktop items={MAIN_NAV} />
+        {/* <NavDesktop items={MAIN_NAV} /> */}
 
         <div className="flex items-center max-sm:*:data-[slot=command-menu-trigger]:hidden">
           <Separator

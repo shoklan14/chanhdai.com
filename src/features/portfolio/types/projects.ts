@@ -1,3 +1,5 @@
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
+
 export type Project = {
   /** Stable unique identifier (used as list key/anchor). */
   id: string
@@ -22,4 +24,8 @@ export type Project = {
   icon?: React.ReactElement
   /** Whether the project card is expanded by default in the UI. */
   isExpanded?: boolean
+  /** Portfolio views where this project should be displayed */
+  views?: PortfolioView[]
+  /** High level domain */
+  category?: "medical" | "software" | "both"
 }

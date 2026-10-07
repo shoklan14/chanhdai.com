@@ -1,3 +1,4 @@
+/*
 import type { Metadata, Route } from "next"
 import Link from "next/link"
 import { addQueryParams } from "@/utils/url"
@@ -276,4 +277,9 @@ function ComponentList({
       </ul>
     </div>
   )
+}
+*/
+
+export default function Page() {
+  return null
 }

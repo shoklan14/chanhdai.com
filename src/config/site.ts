@@ -23,26 +23,26 @@ export const META_THEME_COLORS = {
 }
 
 export const MAIN_NAV: NavItem<Route>[] = [
-  {
-    title: "Components",
-    href: "/components",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-  },
-  {
-    title: "Craft",
-    href: "/craft",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Sponsors",
-    href: "/sponsors",
-  },
+  // {
+  //   title: "Components",
+  //   href: "/components",
+  // },
+  // {
+  //   title: "Blocks",
+  //   href: "/blocks",
+  // },
+  // {
+  //   title: "Craft",
+  //   href: "/craft",
+  // },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  // },
+  // {
+  //   title: "Sponsors",
+  //   href: "/sponsors",
+  // },
 ]
 
 export const MOBILE_NAV: NavItem<Route>[] = [
@@ -55,10 +55,11 @@ export const MOBILE_NAV: NavItem<Route>[] = [
 
 export const X_HANDLE = SOCIAL.x.handle
 export const GITHUB_USERNAME = SOCIAL.github.handle
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
+export const SOURCE_CODE_GITHUB_REPO = "shoklan14/chanhdai.com"
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/shoklan14/chanhdai.com"
 
-export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
+export const SPONSORSHIP_URL = "https://github.com/sponsors/shoklan14"
 
 export const UTM_PARAMS = {
   utm_source: "chanhdai.com",

@@ -2,78 +2,80 @@ import type { Education } from "@/features/portfolio/types/education"
 
 export const EDUCATION: Education[] = [
   {
-    id: "hcmus",
-    school: "University of Science — VNUHCM",
-    degree: "Bachelor’s degree",
-    fieldOfStudy: "Information Systems",
+    id: "nkua",
+    school: "National and Kapodistrian University of Athens",
+    degree: "Doctor of Medicine (MD)",
+    fieldOfStudy: "Medicine (English-taught MD Programme)",
     period: {
-      start: "08.2018",
-      end: "08.2026",
+      start: "09.2024",
     },
-    description: `- Completed a Bachelor’s degree in Information Systems.
-- Language Proficiency: B1 level in English (CEFR).
-- Achieved several awards, including:
-  - Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-  - 2nd Prize — Business Startup Competition 2019`,
+    description: `- Enrolled in the 6-year English-taught MD program at the School of Medicine.
+- Currently in preclinical medical studies with a cumulative GPA of 8.56/10.
+- Rigorous preclinical coursework and practical laboratory sessions in human gross anatomy, medical physiology, biochemistry, histology, pathology, and medical genetics.
+- Serves as an Anatomy Demonstrator, facilitating small-group peer instruction, prosection demonstrations, and structural identification in the anatomy laboratory.
+- Academic and research interests focused on healthcare technology, artificial intelligence, genomics, and medical education.`,
     skills: [
-      "C++",
-      "Java",
+      "Human Gross Anatomy",
+      "Medical Physiology",
+      "Pathology",
+      "Histology",
+      "Medical Genetics",
+      "Genomics",
+      "Clinical Fundamentals",
+      "Medical Education",
+    ],
+    isExpanded: true,
+    views: ["both", "medicine", "software"],
+  },
+  {
+    id: "self-directed",
+    school: "Self-Directed Software Engineering & AI",
+    degree: "Independent Technical Curriculum & Systems Engineering",
+    fieldOfStudy: "Full-Stack Web, Cross-Platform Mobile & AI Applications",
+    period: {
+      start: "2023",
+    },
+    description: `- Self-taught software developer with hands-on experience across web (React, Next.js, TypeScript), mobile (Flutter, React Native), and backend engineering (Python, FastAPI, PostgreSQL, SQLAlchemy).
+- Specialized in modern AI application engineering: Retrieval-Augmented Generation (RAG with pgvector), autonomous agent architectures with structured tool calling, and biological foundation models (Evo2 with Modal GPU inference).
+- Contributed to production software at Outly and Granoo, and engineered full-stack healthcare technology and AI platforms.`,
+    skills: [
       "Python",
-      "PHP",
-      "DSA",
-      "Advanced Databases",
-      "Systems Design",
-      "Distributed Systems",
-      "Software Engineering",
+      "FastAPI",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Flutter",
+      "PostgreSQL",
+      "pgvector",
+      "RAG",
+      "AI Agents",
+      "Docker",
+      "Azure",
     ],
+    isExpanded: true,
+    views: ["both", "software", "medicine"],
   },
   {
-    id: "chuyenlytutrong",
-    school: "Ly Tu Trong High School for the Gifted",
-    fieldOfStudy: "Computer Science",
+    id: "sandon",
+    school: "Sandon Academy & Cambridge International",
+    degree: "Cambridge International A Levels",
+    fieldOfStudy: "Chemistry, Biology, Physics / Mathematics",
     period: {
-      start: "08.2015",
-      end: "06.2018",
+      start: "01.2021",
+      end: "11.2022",
     },
-    description: `- Student of the Specialized Computer Science Program.
-- Granted direct admission to university due to achieving 3rd Prize at the national level.
-- [Achieved numerous awards](https://baocantho.com.vn/nguyen-chanh-dai-17-tuoi-va-19-giai-thuong-a97348.html) at city and national levels, including:
-  - [3rd Prize](https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm) — National Science and Engineering Fair 2018 (ViSEF)
-  - 1st Prize — Can Tho City Science and Engineering Fair 2018
-  - Creativity Award — Binh Duong Hackathon 2017
-  - Consolation Prize — National Youth and Children’s Creativity Contest 2016
-  - [1st Prize](https://www.youtube.com/watch?v=OYgugvjqU4A) — Can Tho City Youth and Children’s Creativity Contest 2016
-  - 3rd Prize — National Young Informatics Contest 2016
-- Achieved the title of Outstanding Student from Grade 10-12.
-- Selected for the National Excellent Student Contest in Informatics for two consecutive years during high school.
-- Honored on the school’s “Hall of Fame” for academic achievements.
-- Developed a feature using Node.js and Pandoc to recognize multiple-choice questions from .docx files and upload them to an [online quiz platform](https://youtu.be/QjR99wdmTyo) I created.
-- Developed websites based on Laravel framework.
-- Built websites with PHP and MySQL, following the MVC architecture.`,
+    description: `- Awarded Cambridge Outstanding Learner Award: Highest Mark in Zimbabwe for Cambridge International A Level Chemistry (2023).
+- Awarded Cambridge Outstanding Learner Award: 1st Place in Zimbabwe for Best across three Cambridge International A Levels (2023).
+- Conferred the Presidential Award for Academic Excellence (Top 3 High Achieving High School Students in Zimbabwe, 2023).
+- Rigorous laboratory training in chemistry and biology practicals, experimental design, and quantitative analysis.`,
     skills: [
-      "Algorithms",
-      "C++",
-      "PHP",
-      "MySQL",
-      "Laravel",
-      "Node.js",
-      "Pandoc",
+      "A-Level Chemistry",
+      "A-Level Biology",
+      "A-Level Physics",
+      "Scientific Research",
+      "Laboratory Practicals",
     ],
-  },
-  {
-    id: "thcsthuanhung",
-    school: "Thuan Hung Secondary School",
-    period: {
-      start: "08.2011",
-      end: "06.2015",
-    },
-    description: `- Recognized as the most outstanding student of the district.
-- Achieved numerous awards at city and national levels:
-  - Consolation Prize — National Young Informatics Contest 2015
-  - Consolation Prize — National Young Informatics Contest 2014
-  - 1st Prize — Can Tho City Young Informatics Contest 2014
-- Achieved the title of Outstanding Student from Grade 6-9.
-- Developed websites using the open-source NukeViet CMS.`,
-    skills: ["Pascal", "HTML", "CSS", "JavaScript", "NukeViet"],
+    isExpanded: false,
+    views: ["both", "medicine", "software"],
   },
 ]

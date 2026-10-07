@@ -1,3 +1,7 @@
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
+
+export type ExperienceCategory = "medicine" | "software"
+
 export type ExperiencePosition = {
   id: string
   title: string
@@ -36,4 +40,8 @@ export type Experience = {
   positions: ExperiencePosition[]
   /** Marks the company as the current employer for highlighting. */
   isCurrentEmployer?: boolean
+  /** High-level domain category */
+  category?: ExperienceCategory
+  /** Views where this experience is visible */
+  views?: PortfolioView[]
 }

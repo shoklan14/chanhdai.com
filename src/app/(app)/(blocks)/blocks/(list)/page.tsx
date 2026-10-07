@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 import type { CollectionPage, WithContext } from "schema-dts"
 
@@ -86,4 +87,9 @@ export default function BlocksPage() {
       <BlockList blocks={blocks} showAds />
     </>
   )
+}
+*/
+
+export default function BlocksPage() {
+  return null
 }

@@ -1,4 +1,5 @@
 import type { AvatarLightsVariants } from "@/features/portfolio/components/avatar-lights"
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
 
 export type User = {
   firstName: string
@@ -11,6 +12,7 @@ export type User = {
   /** e.g. "he/him", "she/her", "they/them" */
   pronouns: string
   bio: string
+  bioByView?: Record<PortfolioView, string>
   /** Short phrases rotated in UI (e.g., homepage flip effect) */
   flipSentences: string[]
   /** General location for display */
@@ -23,24 +25,27 @@ export type User = {
   website: string
   /** Primary/current role shown on profile */
   jobTitle: string
+  jobTitleByView?: Record<PortfolioView, string>
   /** Work history entries */
   jobs: {
     title: string
     company: string
-    website: string
+    website?: string
     experienceId?: string
+    view?: PortfolioView[]
   }[]
   /** Rich about section; supports Markdown */
   about: string
+  aboutByView?: Record<PortfolioView, string>
   /** Public URL to avatar image */
   avatar: string
   avatarSketch?: string
   /** Different avatar variants based on theme and lighting */
-  avatarVariants: AvatarLightsVariants
+  avatarVariants?: AvatarLightsVariants
   /** Open Graph image URL for social sharing */
   ogImage: string
   /** Audio URL for name pronunciation */
-  namePronunciationUrl: string
+  namePronunciationUrl?: string
   /** SEO keywords list for metadata */
   keywords: string[]
   /** Time zone in IANA format (e.g., "Asia/Ho_Chi_Minh") */

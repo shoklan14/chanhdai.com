@@ -1,3 +1,5 @@
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
+
 export type Education = {
   id: string
   school: string
@@ -10,4 +12,5 @@ export type Education = {
   description?: string
   skills?: string[]
   isExpanded?: boolean
+  views?: PortfolioView[]
 }

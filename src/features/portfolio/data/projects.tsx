@@ -1,158 +1,152 @@
-import { ChanhDaiMark } from "@/components/chanhdai-mark"
 import {
-  QuaricIcon,
-  ReactWheelPickerIcon,
-  ZaDarkIcon,
-} from "@/components/icons"
+  ActivityIcon,
+  BotIcon,
+  DnaIcon,
+  GraduationCapIcon,
+  SmartphoneIcon,
+  UtensilsIcon,
+} from "lucide-react"
 
 import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
-    id: "react-wheel-picker",
-    title: "React Wheel Picker",
+    id: "ai-genomics",
+    title: "AI Genomics — Variant Effect Prediction",
     period: {
-      start: "05.2025",
+      start: "2025",
     },
-    link: "https://react-wheel-picker.chanhdai.com",
+    link: "https://variant-analysis.vercel.app",
     skills: [
-      "Open Source",
+      "AI & Genomics",
+      "Next.js",
       "React",
       "TypeScript",
-      "Monorepo",
-      "Turborepo",
-      "pnpm-workspace",
-      "Package Publishing",
-      "NPM Registry",
-      "GitHub Actions",
+      "Python",
+      "FastAPI",
+      "Evo2",
+      "Modal GPU",
+      "ClinVar",
+      "NCBI / UCSC APIs",
     ],
-    description: `iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. / Backed by [▲ Vercel OSS Program](https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker)
-- Natural touch scrolling with smooth inertia, mouse drag and scroll for desktop
-- Infinite loop scrolling
-- Unstyled core for complete style customization
-- Full keyboard navigation and type-ahead search
-`,
-    icon: <ReactWheelPickerIcon />,
+    description: `Full-stack application exploring AI-based prediction of the pathogenicity of single-nucleotide variants (SNVs) and benchmarking against established ClinVar classifications.
+- Developed an interactive interface with Next.js, React, and TypeScript paired with a high-performance Python/FastAPI backend.
+- Integrated the Evo2 biological foundation model with GPU-accelerated inference hosted on Modal.
+- Connected real-time genomic data lookup from public NCBI and UCSC database resources for variant annotation.
+- Directly demonstrates the intersection between computational biology, deep learning, and clinical genomic interpretation.`,
+    icon: <DnaIcon />,
     isExpanded: true,
+    views: ["both", "software", "medicine"],
+    category: "both",
   },
   {
-    id: "chanhdaidotcom",
-    title: "chanhdai.com",
+    id: "ai-receptionist",
+    title: "AI Receptionist & Appointment Automation Platform",
     period: {
-      start: "01.2025",
+      start: "2026",
     },
-    link: "https://github.com/ncdai/chanhdai.com",
+    link: "https://github.com/shoklan14",
     skills: [
-      "Open Source",
-      "Next.js 16",
-      "Tailwind CSS v4",
-      "Radix UI",
-      "Base UI",
-      "Motion",
-      "shadcn/ui",
-      "shadcn registry",
-      "Vercel",
-    ],
-    description: "A pixel-perfect dev portfolio and shadcn registry.",
-    icon: <ChanhDaiMark />,
-  },
-  {
-    id: "quaricdotcom",
-    title: "quaric.com",
-    period: {
-      start: "03.2024",
-      end: "07.2025",
-    },
-    link: "https://quaric.com",
-    skills: [
-      "Company Project",
-      "Next.js 15",
-      "Tailwind CSS v3",
-      "shadcn/ui",
-      "Strapi 5",
-      "VNPAY-QR",
+      "Healthcare AI",
+      "Full-Stack",
+      "RAG",
+      "pgvector",
+      "AI Agents",
+      "Tool Calling",
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Google Calendar API",
       "Docker",
-      "Docker Compose",
-      "NGINX",
     ],
-    icon: <QuaricIcon />,
+    description: `Multi-tenant AI receptionist and scheduling platform built initially for healthcare providers and adaptable to appointment-based practices.
+- Implemented Retrieval-Augmented Generation (RAG) using PostgreSQL pgvector embeddings and semantic search to ground responses in verified clinic knowledge.
+- Designed structured knowledge handling where clinic-specific data (services, fees, clinician availability) strictly overrides generic model output.
+- Developed an autonomous AI agent architecture with tool calling for checking availability, booking appointments, cancellations, and rescheduling.
+- Integrated Google Calendar with deterministic scheduling logic to eliminate LLM date/time hallucination.
+- Incorporated healthcare safeguards, sensitive data minimization, and emergency escalation workflows.
+- Built full-stack with Next.js, React, TypeScript, FastAPI, PostgreSQL, Drizzle ORM, SQLAlchemy, Better Auth, and Redis/Upstash.`,
+    icon: <BotIcon />,
+    isExpanded: true,
+    views: ["both", "software", "medicine"],
+    category: "software",
   },
   {
-    id: "zadark",
-    title: "ZaDark",
+    id: "anatomy-peer-education",
+    title: "Anatomy Demonstrator & Clinical Education Modules",
     period: {
-      start: "01.2022",
+      start: "2025",
     },
-    link: "https://zadark.com",
+    link: "https://en.uoa.gr",
     skills: [
-      "Pet Project",
-      "Open Source",
-      "Browser Extension",
-      "CLI",
-      "Docusaurus 3",
+      "Medical Education",
+      "Gross Anatomy",
+      "Curriculum Design",
+      "Clinical Correlation",
+      "Peer Teaching",
     ],
-    description: `ZaDark adds Dark Mode, anti-peeking, customizable fonts, backgrounds, and more to Zalo Web and PC.
-- Earned 10M+ VND in net sales from a paid Safari Extension*
-- 80k+ downloads on SourceForge* (awarded Community Leader badge by SourceForge)
-- 30k+ active users via Chrome Web Store*
-- Bronze Medal — 10th Design, Manufacturing, and Application Award 2022
-
-<p class="text-muted-foreground">* Peak metrics.</p>
-`,
-    icon: <ZaDarkIcon />,
+    description: `Educational initiative and anatomical study guides developed for preclinical medical students at NKUA.
+- Created structured revision materials and anatomical prosection guides covering musculoskeletal, cardiovascular, and neuroanatomical systems.
+- Facilitated practical laboratory sessions focusing on 3D spatial orientation and clinical anatomy correlations.`,
+    icon: <GraduationCapIcon />,
+    views: ["medicine", "both"],
+    category: "medical",
   },
   {
-    id: "penphy",
-    title: "Penphy",
+    id: "outly-platform",
+    title: "Outly — Social Dining & Discovery Platform",
     period: {
-      start: "01.2019",
-      end: "08.2019",
+      start: "07.2025",
+      end: "06.2026",
     },
-    link: "https://www.youtube.com/watch?v=EdU7rUO-UA4",
-    skills: ["Startup Project", "JavaScript", "React Native"],
-    description: "2nd Prize — Business Startup Competition 2019",
-  },
-  {
-    id: "unlimitedstudy",
-    title: "UnlimitedStudy",
-    period: {
-      start: "01.2017",
-      end: "08.2018",
-    },
-    link: "https://muctim.tuoitre.vn/cong-cu-ho-tro-viec-day-va-hoc-55107.htm",
+    link: "https://outly.world",
     skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
-      "jQuery",
-      "Bootstrap 3",
+      "Flutter",
+      "Dart",
+      "GetX",
+      "React",
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Firebase",
+      "Redis",
+      "Docker",
+      "Azure",
     ],
-    description: `UnlimitedStudy is a website that provides teaching and learning support tools for teachers and students.
-- 3rd Prize — National Science and Engineering Fair 2018 (ViSEF)
-- 3rd Prize — National Young Informatics Contest 2018
-- Reached 7k+ users, mainly high school students in Can Tho City
-- Pilot implemented in high schools across Can Tho City with English quizzes, supervised by English subject specialists from the Can Tho City Department of Education and Training`,
+    description: `Production social restaurant-discovery and dining platform spanning cross-platform mobile, responsive web, and cloud services.
+- Developed mobile features and state machines using Flutter and GetX; implemented web user flows in React.
+- Engineered backend API endpoints, SQLAlchemy ORM models, and business logic with FastAPI.
+- Configured Firebase Authentication and Storage, Redis caching, Docker microservices, and Azure cloud infrastructure.`,
+    icon: <UtensilsIcon />,
+    views: ["software", "both"],
+    category: "software",
   },
   {
-    id: "study-english",
-    title: "Study English",
+    id: "granoo-platform",
+    title: "Granoo — Agritech Marketplace & Operations",
     period: {
-      start: "11.2016",
-      end: "12.2017",
+      start: "02.2025",
+      end: "04.2026",
     },
-    link: "https://www.youtube.com/watch?v=OYgugvjqU4A",
+    link: "https://granoo.africa",
     skills: [
-      "National Competition",
-      "Creative Software",
-      "PHP",
-      "Laravel 4",
-      "MySQL",
+      "Agritech",
+      "Flutter",
+      "React",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Docker",
+      "Azure",
     ],
-    description: `Study English is a free, mobile-friendly website for high school English learning, offering vocabulary, quizzes, listening practice, and more.
-- Consolation Prize — National Youth and Children’s Creativity Contest 2016
-- 1st Prize — Can Tho City Youth and Children’s Creativity Contest 2016
-- Consolation Prize — Can Tho City Young Informatics Contest 2016`,
+    description: `Digital marketplace and operational platform connecting agricultural producers, buyers, and agribusinesses across Africa.
+- Implemented mobile client workflows with Flutter/GetX and responsive web interfaces in React.
+- Developed backend services with FastAPI and SQLAlchemy, including data models and transactional logic.
+- Managed Firebase Auth/Storage, Redis, containerized Docker microservices, and Azure cloud hosting.`,
+    icon: <SmartphoneIcon />,
+    views: ["software"],
+    category: "software",
   },
 ]

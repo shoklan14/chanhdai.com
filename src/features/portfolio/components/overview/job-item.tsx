@@ -1,5 +1,11 @@
 import { addQueryParams } from "@/utils/url"
-import { BriefcaseBusinessIcon, CodeXmlIcon, LightbulbIcon } from "lucide-react"
+import {
+  BriefcaseBusinessIcon,
+  CodeXmlIcon,
+  GraduationCapIcon,
+  LightbulbIcon,
+  MicroscopeIcon,
+} from "lucide-react"
 
 import { UTM_PARAMS } from "@/config/site"
 
@@ -13,7 +19,7 @@ import {
 type JobItemProps = {
   title: string
   company: string
-  website: string
+  website?: string
   experienceId?: string
 }
 
@@ -29,28 +35,41 @@ export function JobItem({
 
       <IntroItemContent>
         {title} <span aria-label="at">@</span>
-        <IntroItemLink
-          className="ml-0.5 font-medium"
-          {...(experienceId
-            ? {
-                href: `#experience-${experienceId}`,
-                target: "_self",
-                rel: "",
-              }
-            : {
-                href: addQueryParams(website, UTM_PARAMS),
-              })}
-        >
-          {company}
-        </IntroItemLink>
+        {experienceId ? (
+          <IntroItemLink
+            className="ml-0.5 font-medium"
+            href={`#experience-${experienceId}`}
+            target="_self"
+            rel=""
+          >
+            {company}
+          </IntroItemLink>
+        ) : website ? (
+          <IntroItemLink
+            className="ml-0.5 font-medium"
+            href={addQueryParams(website, UTM_PARAMS)}
+          >
+            {company}
+          </IntroItemLink>
+        ) : (
+          <span className="ml-0.5 font-medium text-foreground">{company}</span>
+        )}
       </IntroItemContent>
     </IntroItem>
   )
 }
 
 function getJobIcon(title: string) {
-  if (/(developer|engineer)/i.test(title)) {
+  if (/(developer|engineer|builder)/i.test(title)) {
     return <CodeXmlIcon />
+  }
+
+  if (/(medicine|doctor|physician|md|anatomy)/i.test(title)) {
+    return <MicroscopeIcon />
+  }
+
+  if (/(teacher|tutor|education)/i.test(title)) {
+    return <GraduationCapIcon />
   }
 
   if (/(founder|co-founder)/i.test(title)) {

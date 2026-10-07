@@ -1,19 +1,19 @@
 import { USER } from "@/features/portfolio/data/user"
+import type { PortfolioView } from "@/features/portfolio/types/portfolio-view"
 
-import { ChanhDaiMarkIsometric } from "./chanhdai-mark-isometric"
+// import { ChanhDaiMarkIsometric } from "./chanhdai-mark-isometric"
 import { FlipSentences } from "./flip-sentences"
-import { HandwrittenArrow, HandwrittenNote } from "./handwritten-note"
+// import { HandwrittenArrow, HandwrittenNote } from "./handwritten-note"
+import { PortfolioModeSelector } from "./portfolio-mode-selector"
 import { PronounceMyName } from "./pronounce-my-name"
 import { VerifiedIcon } from "./verified-icon"
 
-export function ProfileHeader() {
+export function ProfileHeader({ view = "both" }: { view?: PortfolioView }) {
   return (
-    <div className="screen-line-bottom grid grid-cols-[auto_1fr] grid-rows-[1fr_auto] overflow-y-clip border-x screen-line-bottom-border after:z-1">
-      <figure className="relative col-span-2 p-2 sm:col-span-1 sm:col-start-2 sm:p-4">
+    <div className="screen-line-bottom grid grid-cols-[auto_1fr] overflow-y-clip border-x screen-line-bottom-border after:z-1">
+      {/* <figure className="relative col-span-2 p-2 sm:col-span-1 sm:col-start-2 sm:p-4">
         <ChanhDaiMarkIsometric />
 
-        {/* w-36 needs ~1088px before the gutter can hold it without clipping,
-            and the mark ignores coarse pointers, so nothing to annotate there. */}
         <HandwrittenNote
           className="bottom-20 left-full hidden w-36 flex-col items-start pointer-fine:xl:flex"
           aria-hidden
@@ -29,22 +29,32 @@ export function ProfileHeader() {
         <figcaption className="pointer-events-none absolute right-2 bottom-2 text-sm/none tracking-wide text-[color-mix(in_oklab,var(--muted-foreground)_60%,var(--background))] tabular-nums select-none sm:right-4 sm:bottom-4">
           Fig. 1.
         </figcaption>
-      </figure>
+      </figure> */}
 
-      <div className="flex flex-col sm:row-span-2 sm:row-start-1">
+      <div className="flex flex-col">
         <div className="screen-line-top mt-auto shrink-0 border-r border-line">
           <div className="mx-0.5 my-0.75 flex outline-none">
             <div className="relative size-30 rounded-full min-[24rem]:size-32 sm:size-40">
-              <img
-                className="block size-full rounded-[inherit] object-cover select-none dark:hidden"
-                src={USER.avatarSketch}
-                alt="Avatar with sketch style in light mode"
-              />
-              <img
-                className="hidden size-full rounded-[inherit] object-cover select-none dark:block"
-                src={USER.avatar}
-                alt="Avatar in dark mode"
-              />
+              {USER.avatarSketch ? (
+                <>
+                  <img
+                    className="block size-full rounded-[inherit] object-cover select-none dark:hidden"
+                    src={USER.avatarSketch}
+                    alt={`${USER.displayName} in light mode`}
+                  />
+                  <img
+                    className="hidden size-full rounded-[inherit] object-cover select-none dark:block"
+                    src={USER.avatarSketch}
+                    alt={`${USER.displayName} in dark mode`}
+                  />
+                </>
+              ) : (
+                <img
+                  className="size-full rounded-[inherit] object-cover select-none"
+                  src={USER.avatar}
+                  alt={USER.displayName}
+                />
+              )}
               <div className="pointer-events-none absolute inset-0 rounded-[inherit] inset-ring-1 inset-ring-foreground/30 dark:inset-ring-foreground/10" />
             </div>
           </div>
@@ -77,6 +87,10 @@ export function ProfileHeader() {
             {USER.flipSentences}
           </FlipSentences>
         </div>
+      </div>
+
+      <div className="col-span-2 border-t border-line">
+        <PortfolioModeSelector currentView={view} />
       </div>
     </div>
   )
