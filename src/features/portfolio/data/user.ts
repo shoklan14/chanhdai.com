@@ -24,7 +24,7 @@ export const USER: User = {
   address: "Athens, Greece",
   phoneNumberB64: "KzMwNjk0Mzk3MTEyMw==", // +306943971123 base64 encoded
   emailB64: "bXVmYXJvbWFzaG9rb0BvdXRsb29rLmNvbQ==", // mufaromashoko@outlook.com base64 encoded
-  website: "https://chanhdai.com",
+  website: process.env.NEXT_PUBLIC_APP_URL || "https://shoklan.vercel.app",
   jobTitle: "Medical Student & Software/AI Developer",
   jobTitleByView: {
     both: "Medical Student & Software/AI Developer",
@@ -83,14 +83,7 @@ export const USER: User = {
 `,
   avatar: "/images/avatar.jpg",
   avatarSketch: "/images/avatar-sketch.jpg",
-  // avatarVariants: {
-  //   lightOff: "https://assets.chanhdai.com/images/avatar-light-off.webp",
-  //   lightOn: "https://assets.chanhdai.com/images/avatar-light-on.webp",
-  //   darkOff: "https://assets.chanhdai.com/images/avatar-dark-off.webp",
-  //   darkOn: "https://assets.chanhdai.com/images/avatar-dark-on.webp",
-  // },
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?t=1778602757",
+  ogImage: "/images/icon-512x512.png",
   timeZone: "Europe/Athens",
   keywords: [
     "Mufarowashe Mashoko",

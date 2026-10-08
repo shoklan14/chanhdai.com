@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 
 import { X_HANDLE } from "@/config/site"
@@ -72,4 +73,9 @@ export default function TimelinePage() {
       <div className="screen-line-top h-4" />
     </>
   )
+}
+*/
+
+export default function TimelinePage() {
+  return null
 }

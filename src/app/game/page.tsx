@@ -1,3 +1,4 @@
+/*
 import { Suspense } from "react"
 import type { Metadata } from "next"
 
@@ -44,4 +45,9 @@ export default function GamePage() {
       </section>
     </div>
   )
+}
+*/
+
+export default function GamePage() {
+  return null
 }

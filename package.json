@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "shoklan",
   "version": "0.1.0",
-  "description": "A pixel-perfect dev portfolio and shadcn registry.",
-  "homepage": "https://chanhdai.com",
+  "description": "Medical student & self-taught software developer building at the intersection of medicine, software, and AI.",
+  "homepage": "https://shoklan.vercel.app",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "Mufarowashe Mashoko",
+    "email": "mufaromashoko@outlook.com",
+    "url": "https://github.com/shoklan14"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Mufarowashe Mashoko",
+      "email": "mufaromashoko@outlook.com",
+      "url": "https://github.com/shoklan14"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/shoklan14/chanhdai.com.git"
   },
   "scripts": {
     "dev": "next dev",

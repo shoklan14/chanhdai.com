@@ -17,22 +17,22 @@ import registryStats from "../../registry-stats.json"
 import { ChanhDaiMark } from "./chanhdai-mark"
 
 const INSPIRED_BY = [
+  "Chanh Dai",
   "Tailwind CSS",
   "shadcn/ui",
   "Vercel",
   "Evil Charts",
   "Devouring Details",
   "Skiper UI",
-  "Making Software",
   "shadcncraft",
 ]
 
 const OPENPANEL_URL =
-  "https://openpanel.dev?utm_source=chanhdai.com&utm_medium=referral&utm_campaign=footer"
+  "https://openpanel.dev?utm_source=shoklan.vercel.app&utm_medium=referral&utm_campaign=footer"
 
 // Not derived from `SITE_INFO.url`: that follows `NEXT_PUBLIC_APP_URL` and
 // would read `ncdai.localhost` in dev.
-const SITE_TITLE = "shoklan.com"
+const SITE_TITLE = "shoklan.vercel.app"
 
 const SITE_SUBTITLE = packageJson.description
 

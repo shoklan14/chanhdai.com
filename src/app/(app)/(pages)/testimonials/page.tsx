@@ -1,3 +1,4 @@
+/*
 import type { Metadata } from "next"
 
 import { X_HANDLE } from "@/config/site"
@@ -125,7 +126,7 @@ export default function TestimonialsPage() {
                         <TestimonialVerifiedBadge className="text-info">
                           <VerifiedIcon />
                         </TestimonialVerifiedBadge>
-                      )} */}
+                      )} * /}
                     </TestimonialAuthorName>
                     <TestimonialAuthorTagline>
                       {item.authorTagline}
@@ -141,4 +142,9 @@ export default function TestimonialsPage() {
       </div>
     </>
   )
+}
+*/
+
+export default function Page() {
+  return null
 }

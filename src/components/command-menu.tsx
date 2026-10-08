@@ -95,41 +95,41 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: <ChanhDaiMark />,
     shortcut: "GH",
   },
-  {
-    title: "Components",
-    href: "/components",
-    kind: "page",
-    icon: <ReactIcon />,
-    shortcut: "GC",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-    kind: "page",
-    icon: <GridViewIcon />,
-    shortcut: "GB",
-  },
-  {
-    title: "Craft",
-    href: "/craft",
-    kind: "page",
-    icon: <HugeiconsIcon icon={PenTool03Icon} aria-hidden />,
-    shortcut: "GR",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-    kind: "page",
-    icon: <NewsIcon />,
-    shortcut: "GL",
-  },
-  {
-    title: "Sponsors",
-    href: "/sponsors",
-    kind: "page",
-    icon: <FavouriteIcon />,
-    shortcut: "GS",
-  },
+  // {
+  //   title: "Components",
+  //   href: "/components",
+  //   kind: "page",
+  //   icon: <ReactIcon />,
+  //   shortcut: "GC",
+  // },
+  // {
+  //   title: "Blocks",
+  //   href: "/blocks",
+  //   kind: "page",
+  //   icon: <GridViewIcon />,
+  //   shortcut: "GB",
+  // },
+  // {
+  //   title: "Craft",
+  //   href: "/craft",
+  //   kind: "page",
+  //   icon: <HugeiconsIcon icon={PenTool03Icon} aria-hidden />,
+  //   shortcut: "GR",
+  // },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  //   kind: "page",
+  //   icon: <NewsIcon />,
+  //   shortcut: "GL",
+  // },
+  // {
+  //   title: "Sponsors",
+  //   href: "/sponsors",
+  //   kind: "page",
+  //   icon: <FavouriteIcon />,
+  //   shortcut: "GS",
+  // },
   {
     title: "Bookmarks",
     href: "/bookmarks",
@@ -144,13 +144,13 @@ const MENU_LINKS: CommandLinkItem[] = [
     icon: <LineChartIcon />,
     shortcut: "GI",
   },
-  {
-    title: "Testimonials",
-    href: "/testimonials",
-    kind: "page",
-    icon: <QuoteIcon strokeWidth={1.5} />,
-    shortcut: "GT",
-  },
+  // {
+  //   title: "Testimonials",
+  //   href: "/testimonials",
+  //   kind: "page",
+  //   icon: <QuoteIcon strokeWidth={1.5} />,
+  //   shortcut: "GT",
+  // },
 ]
 
 const PORTFOLIO_LINKS: CommandLinkItem[] = [
@@ -524,26 +524,6 @@ export function CommandMenu({
               >
                 <TypeIcon />
                 Copy Logotype as SVG
-              </CommandMenuItem>
-
-              <CommandMenuItem
-                onHighlight={() => {
-                  setSelectedCommandKind("link")
-                }}
-                onSelect={() => handleOpenLink("/blog/chanhdai-brand")}
-              >
-                <SquareDashedIcon />
-                Brand Guidelines
-              </CommandMenuItem>
-
-              <CommandMenuItem onHighlight={handleCommandHighlight} asChild>
-                <a
-                  href="https://assets.chanhdai.com/chanhdai-brand.zip"
-                  download
-                >
-                  <DownloadIcon />
-                  Download Brand Assets
-                </a>
               </CommandMenuItem>
             </CommandGroup>
 
